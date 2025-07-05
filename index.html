@@ -1,10 +1,42 @@
+# إعادة إنشاء ملف HTML بعد إعادة ضبط الحالة
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ad Banner</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- إعلان بحجم 728x90 -->
 <script type="text/javascript">
-	atOptions = {
-		'key' : 'b3af65d25864a2a58fd409ae286e6c18',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
+  atOptions = {
+    'key': 'b3af65d25864a2a58fd409ae286e6c18',
+    'format': 'iframe',
+    'height': 90,
+    'width': 728,
+    'params': {}
+  };
 </script>
 <script type="text/javascript" src="//www.highperformanceformat.com/b3af65d25864a2a58fd409ae286e6c18/invoke.js"></script>
+
+</body>
+</html>
+"""
+
+# حفظ المحتوى في ملف HTML
+file_path = "/mnt/data/ad_banner_page.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+file_path
